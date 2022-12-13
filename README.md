@@ -2,11 +2,21 @@
 This is a bash disk analysis script that i was tasked to create in my first year of studying Computer Networks And Cyber Security. The Purpose of the Script is to scrape all data from a mounted disk image. 
 
 ---
+
+## Running Locally
+
+In order to run this application locally, you can either download the .zip or run the command:
+
+```bash
+$ git clone https://github.com/olismith0/Bash_Disk_Analysis_Script.git
+```
+
+---
 ## Setup
 To run this script in a Linux enviroment you use the following commands to:
 
 To Create a directory for us to use the script in. To Copy the script to the /bin folder in the new directory we have made. To give the copied script execute privileges. For this assignment, i had to use, w20000418 and kf4005 as directory names. 
-```sh 
+```bash
 $ sudo mkdir -p w20000418/kf4005/bin 
 
 $ sudo cp disk_analysis.sh w20000418/kf4005/bin/
@@ -14,11 +24,11 @@ $ sudo cp disk_analysis.sh w20000418/kf4005/bin/
 $ sudo chmod +x w20000418/kf40005/bin/disk_analysis.sh
 ```
 Next we have to copy the .img file that we would like to  analyse into the kf4005/ directory. 
-```sh 
+```bash 
 $ sudo cp KF4005.img w20000418/kf4005/
 ```
 Now we have to create a mountpoint directory to mount the .img file onto. And then mount the image with the offset: 1048576
-```sh 
+```bash 
 $ sudo mkdir w20000418/kf4005/image
 $ sudo mount -o loop,offset=1048576 KF4005.img image
 ```
@@ -28,7 +38,7 @@ $ sudo mount -o loop,offset=1048576 KF4005.img image
 
 Finally we can run the script using:
 
-```sh 
+```bash 
 sudo disk_analysis.sh -n
 ```
 After running the script a number of things will happen. A Extracted data directory will be created. The raw extracted data will be piped into filedata.txt and a sql database will be initalised with mysql. A formatted .txt will be produced from the database, named sqlout.txt .
