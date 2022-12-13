@@ -3,7 +3,7 @@ This is a bash disk analysis script that i was tasked to create in my first year
 
 ---
 ## Setup
-To run this script in a Linux enviroment you would use the following commands:
+To run this script in a Linux enviroment you use the following commands to:
 
 To Create a directory for us to use the script in. To Copy the script to the /bin folder in the new directory we have made. To give the copied script execute privileges. For this assignment, i had to use, w20000418 and kf4005 as directory names. 
 ```sh 
